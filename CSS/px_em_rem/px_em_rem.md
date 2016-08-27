@@ -52,6 +52,7 @@ h2{font-size: 0.5em; padding: 1em 0 0;}
 
 ```
 效果图
+
 ![](em_padding.PNG)
 
 可以看到h2的上内边距与h2等高，为20px，为什么不是40px？
