@@ -35,8 +35,11 @@ h2{font-size: 0.5em;}
 效果图
 
 ![](em.PNG "桌面浏览器")
+
 h1为40px，h2为20px
+
 ![](em_media.PNG "手机端")
+
 h1为64px，h2为32px
 
 ### 你需要知道的em的影响
