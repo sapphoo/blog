@@ -3,11 +3,11 @@
 
 <head>
     <style>
-    * {
+        * {
             margin: 0;
         }
         
-        body {
+        html {
             font-size: 62.5%;
             /*16px * 62.5% = 10px;*/
             text-align: center;
@@ -33,9 +33,14 @@
             font-size: 0.5em;
             background: pink;
             /*font-size影响padding中的1em的大小，变成20px;*/
-            /*padding: 0 0 1em;*/
+            padding: 1rem 0 0;
         }
-    }
+        
+        @media(max-width: 800px) {
+            body {
+                font-size: 100%;
+            }
+        }
     </style>
 </head>
 
