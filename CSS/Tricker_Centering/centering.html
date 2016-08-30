@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="centering.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="horizontal">
+        <h2>horizontally center</h2>
+        <div id="hori_inline_*" class="main main main_fat">
+            This text is centered.
+            <!--这一行没有居中是因为它是匿名块框，不是inline类型的元素，会在css的各种框中作出相关说明-->
+            <header>
+                This text is centered.
+            </header>
+            <nav>
+                <a href="#0">One</a>
+                <a href="#0">Two</a>
+                <a href="#0">Three</a>
+                <a href="#0">Four</a>
+            </nav>
+        </div>
+        <div id="hori_block" class="main main_fat">
+            <div class="child">
+                I'm a block level element and am centered.
+            </div>
+        </div>
+
+
+        <div id="hori_multi_block" class="main resize_horizontal">
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.
+            </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+        </div>
+
+        <div id="hori_multi_block_flex" class="main">
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.
+            </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+        </div>
+        <div id="hori_multi_block_stack" class="main">
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do. </div>
+            <div class="child">
+                I'm an element that is block-like with my siblings and we're centered in a row.
+            </div>
+        </div>
+
+
+        <br class="clear" />
+    </div>
+    <div id="vertical_inline_*">
+        <h2>vertical_inline_*</h2>
+        <div id="vertical_inline_singleline" class="main main_fat">
+            <a href="#0" class="child_inline">We're</a>
+            <a href="#0" class="child_inline">Centered</a>
+            <a href="#0" class="child_inline">Bits of</a>
+            <a href="#0" class="child_inline">Text</a>
+        </div>
+        <div id="vertical_inline_nowrap" class="main main_fat">
+            <div class="child_inline">
+                I'm a centered line.
+            </div>
+        </div>
+        <table class="main main_fat">
+            <tr>
+                <td class="child_inline">
+                    I'm vertically centered multiple lines of text in a real table cell.
+                </td>
+            </tr>
+        </table>
+
+        <div id="vertical_inline_centertable" class="main main_fat">
+            <p class="child_inline">I'm vertically centered multiple lines of text in a CSS-created table layout.I'm vertically centered multiple lines of text in a CSS-created table layout.</p>
+        </div>
+
+        <div id="vertical_inline_flexcenter" class="main main_fat">
+            <p class="child_inline">I'm vertically centered multiple lines of text in a flexbox container.</p>
+        </div>
+
+        <div id="vertical_inline_ghostcenter" class="main main_fat">
+            <p class="child_inline">I'm vertically centered multiple lines of text in a container. Centered with a ghost pseudo element.</p>
+        </div>
+
+        <br class="clear" />
+    </div>
+
+    <div id="vertical_block">
+        <h2>vertical-block</h2>
+        <div id="veritical_block_heightknown" class="main main_thin resize_vertical">
+            <div class="child">
+                I'm a block-level element with a fixed height, centered vertically within my parent.
+            </div>
+        </div>
+        <div id="veritical_block_heightnotknown" class="main main_thin">
+            <div class="child resize_vertical">
+                I'm a block-level element with an unknown height, centered vertically within my parent.
+            </div>
+        </div>
+        <div id="veritical_block_flexbox" class="main main_thin resize_vertical">
+            <div class="child">
+                I'm a block-level element with an unknown height, centered vertically within my parent.
+            </div>
+        </div>
+        <br class="clear" />
+    </div>
+
+    <div id="hor_ver_center">
+        <h2>both horizontally and vertically</h2>
+        <div id="hor_ver_fixedwidhei" class="main main_thin resize_vertical">
+            <div class="child">
+                I'm a block-level element a fixed height and width, centered vertically within my parent.
+            </div>
+        </div>
+        <div id="hor_ver_unknownwidhei" class="main main_thin">
+            <div class="child resize_vertical">
+                I'm a block-level element of an unknown height and width, centered vertically within my parent.
+            </div>
+        </div>
+        <br class="clear">
+    </div>
+</body>
+
+
+</html>

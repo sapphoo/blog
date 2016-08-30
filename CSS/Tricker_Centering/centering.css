@@ -1,0 +1,207 @@
+body {
+    background: #f06d06;
+}
+
+h2 {
+    float: left;
+    writing-mode: vertical-lr;
+    padding: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.main {
+    background: white;
+    margin: 20px;
+    float: left;
+}
+
+.main_fat,
+.main_thin {
+    width: 300px;
+    height: 300px;
+}
+
+.main_fat {
+    padding: 50px;
+}
+
+.main_thin {
+    position: relative;
+}
+
+.child_inline,
+.child {
+    background: black;
+    color: white;
+}
+
+.child {
+    padding: 20px;
+}
+
+td,
+p {
+    padding: 20px;
+}
+
+.resize_vertical {
+    resize: vertical;
+    /*none|both|horizontal|vertical*/
+    overflow: auto;
+    /*如果希望resize属性生效，overflow可以是auto,hidden,scroll*/
+}
+
+.resize_horizontal {
+    resize: horizontal;
+    overflow: auto;
+}
+
+header,
+nav {
+    text-align: center;
+}
+
+#hori_inline_* {
+    text-align: center;
+}
+
+#hori_block div {
+    margin: 0 auto;
+}
+
+#hori_multi_block {
+    text-align: center;
+    margin: 20px 0;
+    width: 700px;
+    height: 400px;
+}
+
+#hori_multi_block div {
+    display: inline-block;
+    text-align: center;
+}
+
+#hori_multi_block_flex {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin-left: 130px;
+}
+
+#hori_multi_block div,
+#hori_multi_block_flex div {
+    max-width: 125px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#hori_multi_block_stack {
+    width: 700px;
+}
+
+#hori_multi_block_stack div {
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#hori_multi_block_stack div:nth-child(1) {
+    width: 200px;
+}
+
+#hori_multi_block_stack div:nth-child(2) {
+    width: 400px;
+}
+
+#hori_multi_block_stack div:nth-child(3) {
+    width: 150px;
+}
+
+#vertical_inline_singleline a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: none;
+}
+
+#vertical_inline_nowrap div {
+    height: 300px;
+    line-height: 300px;
+    white-space: nowrap;
+    /*文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。*/
+}
+
+#vertical_inline_centertable {
+    display: table;
+}
+
+#vertical_inline_centertable p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#vertical_inline_flexcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 130px;
+}
+
+#vertical_inline_ghostcenter {
+    position: relative;
+}
+
+#vertical_inline_ghostcenter::before {
+    content: " ";
+    height: 100%;
+    width: 1%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#vertical_inline_ghostcenter p {
+    width: 240px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#veritical_block_heightknown div {
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -70px;
+    /*140px的正中为70px，如果想让中点的位置处于本来顶点所处的位置，就要将上外边距减少70px*/
+}
+
+#veritical_block_heightnotknown div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*将中点移动到顶点所在的位置。上移自身半个高度。*/
+    resize: vertical;
+    overflow: auto;
+}
+
+#veritical_block_flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hor_ver_fixedwidhei div {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -120px;
+}
+
+#hor_ver_unknownwidhei div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
